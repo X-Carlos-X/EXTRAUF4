@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Buscar codigo{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}
+            <h2>Buscar employee</h2>
+            <form action="{{ path('app_search') }}" method="post">
+                <div class="form-group">
+                    <input type="text" id="employee" name="_employee class="form-control" value="{{ employee }}"/>
+                </div>
+
+                <button type="submit" class="btn btn-success">Buscar Codi</button>
+            </form>
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
